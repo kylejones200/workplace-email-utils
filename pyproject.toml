@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "workplace-email-utils"
+version = "0.1.0"
+description = "Email open/ingest/process utilities for downstream pipelines (non-NLP; no web server)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+# Install from requirements.txt for the full stack; this keeps pyproject minimal.
+
+[tool.setuptools.packages.find]
+where = ["src"]

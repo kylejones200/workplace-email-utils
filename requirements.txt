@@ -1,0 +1,27 @@
+# Core data processing
+pandas>=2.0.0,<3.0.0
+numpy>=1.24.0,<2.0.0
+scikit-learn>=1.3.0,<1.6.0  # Constrained for compatibility
+
+# ML and embeddings
+sentence-transformers>=2.2.0
+umap-learn>=0.5.4
+hdbscan>=0.8.33
+
+# Graph analysis
+networkx>=3.1,<4.0.0
+
+# Vector search (use faiss-cpu for CPU, faiss-gpu for GPU)
+# For Apple Silicon (M1/M2/M3), use: pip install faiss-cpu --no-build-isolation
+# For other platforms: pip install faiss-cpu
+faiss-cpu>=1.7.4
+
+# Topic modeling (optional - install separately if needed)
+# lda>=1.1.0  # Uncomment if you want Gibbs sampling LDA
+
+# Utilities
+email-validator>=2.0.0
+python-dateutil>=2.8.2
+packaging>=20.0,<25.0  # Constrained for compatibility
+pyarrow>=10.0.0  # For parquet file support
+
