@@ -8,10 +8,44 @@ version = "0.1.0"
 description = "Email open/ingest/process utilities for downstream pipelines (non-NLP; no web server)"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
-
-[project.optional-dependencies]
-# Install from requirements.txt for the full stack; this keeps pyproject minimal.
+dependencies = [
+  "jsonschema>=4.0.0",
+    "pandas>=2.0.0,<3.0.0",
+    "numpy>=1.24.0,<2.0.0",
+    "scikit-learn>=1.3.0,<1.6.0",
+    "sentence-transformers>=2.2.0",
+    "umap-learn>=0.5.4",
+    "hdbscan>=0.8.33",
+    "networkx>=3.1,<4.0.0",
+    "faiss-cpu>=1.7.4",
+    "email-validator>=2.0.0",
+    "python-dateutil>=2.8.2",
+    "packaging>=20.0,<25.0",
+    "pyarrow>=10.0.0",
+]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.uv]
+package = true
+
+[project.scripts]
+agent_email_extract_non-nlp = "agent_email_extract_non_nlp.api:main"
+
+[dependency-groups]
+dev = [
+"jsonschema>=4.0.0",
+"pytest>=8.0",
+"ruff>=0.6.0",
+"sphinx>=8.0.0",
+  "sphinx-rtd-theme>=3.0.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"

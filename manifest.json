@@ -1,0 +1,61 @@
+{
+  "name": "agent_email_extract_non-nlp",
+  "slug": "agent_email_extract_non_nlp",
+  "version": "0.1.0",
+  "description": "agent_email_extract_non-nlp agent",
+  "entrypoint": "agent_email_extract_non_nlp.agent:run",
+  "capabilities": [
+    "agent_execution"
+  ],
+  "pages": [
+    {
+      "id": "overview",
+      "title": "Overview",
+      "route": "/agents/agent_email_extract_non_nlp",
+      "component": "overview",
+      "description": "Agent overview."
+    },
+    {
+      "id": "run",
+      "title": "Run",
+      "route": "/agents/agent_email_extract_non_nlp/run",
+      "component": "run",
+      "description": "Run the agent."
+    },
+    {
+      "id": "results",
+      "title": "Results",
+      "route": "/agents/agent_email_extract_non_nlp/results",
+      "component": "results",
+      "description": "View results."
+    }
+  ],
+  "navigation": [
+    {
+      "page_id": "overview",
+      "label": "Overview",
+      "group": "Agents",
+      "order": 10
+    },
+    {
+      "page_id": "run",
+      "label": "Run",
+      "group": "Agents",
+      "order": 20
+    },
+    {
+      "page_id": "results",
+      "label": "Results",
+      "group": "Agents",
+      "order": 30
+    }
+  ],
+  "schemas": {
+    "request": "schemas/request.schema.json",
+    "response": "schemas/response.schema.json"
+  },
+  "examples": {
+    "request": "examples/request.json",
+    "response": "examples/response.json"
+  }
+}

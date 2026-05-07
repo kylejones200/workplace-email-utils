@@ -1,0 +1,6 @@
+agent:
+  name: agent_email_extract_non-nlp
+  version: 0.1.0
+  description: Demo config for agent_email_extract_non-nlp.
+run:
+  mode: local

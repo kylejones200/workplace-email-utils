@@ -1,0 +1,10 @@
+{
+  "status": "success",
+  "message": "ok",
+  "data": {},
+  "metadata": {
+    "agent_slug": "agent_email_extract_non_nlp",
+    "agent_version": "0.1.0",
+    "run_id": "example"
+  }
+}
